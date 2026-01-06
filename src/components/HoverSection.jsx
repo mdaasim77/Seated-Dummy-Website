@@ -45,7 +45,7 @@ const services = [
     note: {
       text: "This wagyu ribeye was everything I've ever wanted! You nailed it!- Amory, Celebration King",
       color: "#5797f4",
-      rotate: "-8deg",
+      rotate: "-4deg",
     },
   },
   {
@@ -56,7 +56,7 @@ const services = [
     note: {
       text: "A retreat that doesn't just recharge you — it transforms you!- Adele, Herbalist",
       color: "#fe8d22",
-      rotate: "-8deg",
+      rotate: "8deg",
     },
   },
 ];
