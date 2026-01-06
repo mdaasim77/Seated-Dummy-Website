@@ -5,12 +5,14 @@ import img1 from "../Images/img1.webp";
 import img2 from "../Images/img2.webp";
 import img3 from "../Images/img3.webp";
 import img4 from "../Images/img4.webp";
+import img5 from "../Images/img5.webp";
 
 const services = [
   { title: "COCKTAILS", image: img1 },
-  { title: "DINING", image: img2 },
-  { title: "GETAWAYS", image: img3 },
-  { title: "WORKSHOPS", image: img4 },
+  { title: "EXPERIENCE", image: img2 },
+  { title: "DINNING", image: img3 },
+  { title: "GETAWAYS", image: img4 },
+  { title: "WORKSHOPS", image: img5 },
 ];
 
 export default function HoverSection() {
@@ -43,7 +45,7 @@ export default function HoverSection() {
         className="relative z-10 flex flex-col items-center gap-6 text-center"
         onMouseLeave={() => setActive(null)}
       >
-        <p className="text-xs tracking-widest mb-2">SERVICES</p>
+        <p className="tracking-widest mb-2 text-5xl font-bold">SERVICES</p>
 
         {services.map((item, i) => (
           <h2
