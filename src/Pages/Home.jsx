@@ -15,7 +15,7 @@ export default function Home() {
     <>
       {/* PAGE 1 — NORMAL TEXT (SLOW PARALLAX) */}
       <section className="h-screen bg-[#f6f4f1] flex items-center justify-center px-40 text-center overflow-hidden">
-        <motion.p style={{ y: page1Y }} className="max-w-3xl text-lg">
+        <motion.p style={{ y: page1Y }} className="max-w-3xl text-2xl ">
           SEATED is a creative culinary factory that crafts one-of-a-kind
           experiences around the world.
         </motion.p>
@@ -25,7 +25,7 @@ export default function Home() {
       <section className="h-screen bg-[#f6f4f1] flex items-center justify-center px-40 text-center overflow-hidden">
         <motion.p
           style={{ y: page2Y }}
-          className="max-w-3xl text-2xl font-bold"
+          className="max-w-3xl text-5xl font-bold"
         >
           WE DESIGN IMMERSIVE CULINARY EXPERIENCES THAT CONNECT PEOPLE, CULTURE,
           AND STORYTELLING THROUGH FOOD.
