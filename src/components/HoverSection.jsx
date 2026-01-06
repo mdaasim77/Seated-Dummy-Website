@@ -45,7 +45,7 @@ export default function HoverSection() {
         className="relative z-10 flex flex-col items-center gap-6 text-center"
         onMouseLeave={() => setActive(null)}
       >
-        <p className="tracking-widest mb-2 text-5xl font-bold">SERVICES</p>
+        <p className="tracking-widest mb-2 text-lg ">SERVICES</p>
 
         {services.map((item, i) => (
           <h2

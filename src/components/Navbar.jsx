@@ -1,11 +1,11 @@
 export default function Navbar() {
   return (
-    <nav className="fixed top-0 w-full flex justify-between px-10 py-6 z-50">
-      <h1 className="text-xl font-serif">NYC Studio</h1>
-      <div className="flex gap-8 text-sm">
-        <a href="#">Work</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
+    <nav className="fixed top-0 w-full z-50 flex justify-between px-10 py-6">
+      <h1 className="font-bold">SEATED</h1>
+      <div className="flex gap-6 text-sm">
+        <span>SERVICES</span>
+        <span>PROJECTS</span>
+        <span>CONTACT</span>
       </div>
     </nav>
   );
