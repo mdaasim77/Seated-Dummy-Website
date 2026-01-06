@@ -8,10 +8,10 @@ import img3 from "../Images/img3.webp";
 import img4 from "../Images/img4.webp";
 
 // HANDWRITTEN / SCRIBBLE IMAGES
-import note1 from "../Images/note1.jfif";
-import note2 from "../Images/note2.jfif";
-import note3 from "../Images/note3.jfif";
-import note4 from "../Images/note4.png";
+// import note1 from "../Images/note1.jfif";
+// import note2 from "../Images/note2.jfif";
+// import note3 from "../Images/note3.jfif";
+// import note4 from "../Images/note4.png";
 
 // DATA (THIS DRIVES EVERYTHING)
 const services = [
@@ -20,28 +20,44 @@ const services = [
     image: img1,
     description:
       "CLASSIC & SIGNATURE COCKTAILS / PREMIUM ICE & INGREDIENTS / CURATED GLASSWARE / PROFESSIONAL BARTENDERS / ELEGANT PRESENTATION / WARM HOSPITALITY",
-    note: note1,
+    note: {
+      text: "THEIR COCKTAILS ARE BRILLIANTLY\nCRAFTED – CREATIVE, BALANCED\nAND DOWNRIGHT DELICIOUS\n— AMJURI, CEO OF VERSO",
+      color: "#f3369c",
+      rotate: "-8deg",
+    },
   },
   {
     title: "EXPERIENCES",
     image: img2,
     description:
       "EVENT DESIGN / EXCLUSIVE SETTINGS / SENSORY IMMERSION / PERSONALIZED TOUCH / MEMORABLE INTERACTION / EMOTIONAL RESONANCE",
-    note: note2,
+    note: {
+      text: "Absolutely next level! It's an experience I never want to end. I'm moving in Matthias, DJ",
+      color: "#f64341",
+      rotate: "-8deg",
+    },
   },
   {
     title: "DINING",
     image: img3,
     description:
       "CHEF-DRIVEN MENUS / SEASONAL INGREDIENTS / STORYTELLING THROUGH FOOD",
-    note: note3,
+    note: {
+      text: "This wagyu ribeye was everything I've ever wanted! You nailed it!- Amory, Celebration King",
+      color: "#5797f4",
+      rotate: "-8deg",
+    },
   },
   {
     title: "GETAWAYS",
     image: img4,
     description:
       "DESTINATION EXPERIENCES / IMMERSIVE TRAVEL / CURATED CULINARY JOURNEYS",
-    note: note4,
+    note: {
+      text: "A retreat that doesn't just recharge you — it transforms you!- Adele, Herbalist",
+      color: "#fe8d22",
+      rotate: "-8deg",
+    },
   },
 ];
 
@@ -68,15 +84,23 @@ export default function HoverSection() {
       {/* HANDWRITTEN NOTE */}
       <AnimatePresence>
         {active?.note && (
-          <motion.img
-            key={active.note}
-            src={active.note}
+          <motion.div
+            key={active.note.text}
+            style={{
+              color: active.note.color,
+              transform: `rotate(${active.note.rotate})`,
+              fontFamily: "'Permanent Marker', cursive",
+            }}
             className="absolute left-[12%] top-[28%] w-[280px] rounded-full"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.4, ease: "easeOut" }}
-          />
+          >
+            <p className="text-lg leading-relaxed whitespace-pre-line">
+              {active.note.text}
+            </p>
+          </motion.div>
         )}
       </AnimatePresence>
 
