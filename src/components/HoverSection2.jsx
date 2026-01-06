@@ -1,21 +1,21 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-import img1 from "../Images/img1.webp";
-import img2 from "../Images/img2.webp";
-import img3 from "../Images/img3.webp";
-import img4 from "../Images/img4.webp";
-import img5 from "../Images/img5.webp";
+import img11 from "../Images/img11.webp";
+import img12 from "../Images/img12.webp";
+import img13 from "../Images/img13.webp";
+import img14 from "../Images/img14.webp";
+import img15 from "../Images/img15.webp";
 
 const services = [
-  { title: "COCKTAILS", image: img1 },
-  { title: "EXPERIENCE", image: img2 },
-  { title: "DINNING", image: img3 },
-  { title: "GETAWAYS", image: img4 },
-  { title: "WORKSHOPS", image: img5 },
+  { title: "ZEMYA WINE BAR", image: img11 },
+  { title: "AMORY'S BDAY DINNER", image: img12 },
+  { title: "TULESTE GALLERY & NYDW", image: img13 },
+  { title: "MEADOWSWEET RETREAT", image: img14 },
+  { title: "PASTRY", image: img15 },
 ];
 
-export default function HoverSection() {
+export default function HoverSection2() {
   const [active, setActive] = useState(null);
 
   return (
@@ -42,19 +42,16 @@ export default function HoverSection() {
 
       {/* HOVER ITEMS (PERFECT CENTER) */}
       <div
-        className="relative z-10 flex flex-col items-center gap-6 text-center "
+        className="relative z-10 flex flex-col items-center gap-6 text-center"
         onMouseLeave={() => setActive(null)}
       >
-        <p className="tracking-widest mb-2 text-lg font-bold underline ">
-          SERVICES
-        </p>
+        <p className="tracking-widest mb-2 text-lg ">SERVICES</p>
 
         {services.map((item, i) => (
           <h2
             key={i}
             onMouseEnter={() => setActive(item.image)}
-            className="
-              text-4xl 
+            className="text-4xl 
               text-gray-400
               cursor-pointer 
               transition-opacity 
