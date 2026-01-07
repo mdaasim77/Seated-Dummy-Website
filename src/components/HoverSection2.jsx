@@ -19,7 +19,7 @@ export default function HoverSection2() {
   const [active, setActive] = useState(null);
 
   return (
-    <section className="relative h-screen bg-[#f6f4f1] flex items-center justify-center overflow-hidden">
+    <section className="relative h-screen bg-[#d4cabb] flex items-center justify-center overflow-hidden">
       {/* CENTER IMAGE */}
       <AnimatePresence>
         {active && (

@@ -15,7 +15,7 @@ export default function Home() {
   const page2Y = useTransform(scrollY, [0, 1000], ["120%", "0%"]);
   const page3Y = useTransform(scrollY, [800, 2200], ["120%", "0%"]);
   const page4Y = useTransform(scrollY, [2200, 3000], ["120%", "0%"]);
-  const page5Y = useTransform(scrollY, [4600, 5500], ["120%", "0%"]);
+  const page5Y = useTransform(scrollY, [3000, 3400], ["120%", "0%"]);
 
   return (
     <div className="relative h-[600vh]">
@@ -52,7 +52,7 @@ export default function Home() {
       {/* PAGE 4 */}
       <motion.section
         style={{ y: page4Y }}
-        className="fixed inset-0 bg-[#2c0f70] z-[4]"
+        className="fixed inset-0 bg-[#f6f4f1] z-[4]"
       >
         <HoverSection2 />
       </motion.section>
