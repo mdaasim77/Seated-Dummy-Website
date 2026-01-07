@@ -41,10 +41,7 @@ export default function HoverSection2() {
       </AnimatePresence>
 
       {/* HOVER ITEMS (PERFECT CENTER) */}
-      <div
-        className="relative z-10 flex flex-col items-center gap-6 text-center"
-        onMouseLeave={() => setActive(null)}
-      >
+      <div className="relative z-10 flex flex-col items-center gap-6 text-center">
         <p className="tracking-widest mb-2 text-lg ">SERVICES</p>
 
         {services.map((item, i) => (
