@@ -105,10 +105,7 @@ export default function HoverSection() {
       </AnimatePresence>
 
       {/* CENTER MENU */}
-      <div
-        className="relative z-10 flex flex-col items-center gap-4 text-center"
-        onMouseLeave={() => setActive(null)}
-      >
+      <div className="relative z-10 flex flex-col items-center gap-4 text-center">
         <p className="tracking-widest mb-4">SERVICES</p>
 
         {services.map((item, i) => (
