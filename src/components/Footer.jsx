@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <section className="relative min-h-screen bg-black text-white px-10 py-20">
-      <h1 className="text-[12vw] font-black text-center mb-10">
+      <h1 className="text-[2vw] font-black text-center mb-10">
         LET’S COOK
         <br />
         TOGETHER.
