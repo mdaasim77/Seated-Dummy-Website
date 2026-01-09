@@ -1,38 +1,60 @@
+import { useState } from "react";
+
 export default function Footer() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [status, setStatus] = useState("");
+
+  const handleSubmit = async () => {
+    if (!name || !email || !message) {
+      setStatus("Please fill required fields");
+      return;
+    }
+
+    setStatus("Sending...");
+
+    const res = await fetch("http://localhost:5000/send-mail", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, email, message }),
+    });
+
+    const data = await res.json();
+    setStatus(data.success ? "Message sent" : "Failed to send");
+  };
+
   return (
-    <section className="relative min-h-screen bg-black text-white px-10 py-20">
-      <h1 className="text-[2vw] font-black text-center mb-10">
+    <section className="min-h-screen bg-black text-white px-10 py-20">
+      <h1 className="text-[6vw] font-black text-center mb-10">
         LET’S COOK
-        <br />
-        TOGETHER.
+        <br /> TOGETHER.
       </h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-        <Input label="FULL NAME" />
-        <Input label="COMPANY NAME" />
-        <Input label="PHONE" />
-        <Input label="EMAIL" />
-        <Input label="EVENT DATE" />
-        <Input label="NUMBER OF GUESTS" />
-        <div className="md:col-span-2">
-          <Input label="ENTER PROJECT DETAILS" />
-        </div>
+      <div className="max-w-3xl mx-auto space-y-6">
+        <Input label="Name" onChange={(e) => setName(e.target.value)} />
+        <Input label="Email" onChange={(e) => setEmail(e.target.value)} />
+        <Input label="Message" onChange={(e) => setMessage(e.target.value)} />
       </div>
 
       <div className="text-center mt-10">
-        <button className="border border-white px-10 py-3 rounded-full">
+        <button
+          onClick={handleSubmit}
+          className="border rounded-full px-8 py-3"
+        >
           SUBMIT
         </button>
+        {status && <p className="mt-4">{status}</p>}
       </div>
     </section>
   );
 }
 
-function Input({ label }) {
+function Input({ label, onChange }) {
   return (
     <div>
       <label className="block mb-2 text-xs opacity-70">{label}</label>
-      <input className="w-full bg-transparent border-b border-white focus:outline-none py-2" />
+      <input onChange={onChange} className="w-full text-black px-3 py-2" />
     </div>
   );
 }
