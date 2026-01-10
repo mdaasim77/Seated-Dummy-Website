@@ -13,9 +13,9 @@ export default function Home() {
 
   const page1Y = useTransform(scrollY, [0, 0], ["0%", "0%"]);
   const page2Y = useTransform(scrollY, [0, 1000], ["120%", "0%"]);
-  const page3Y = useTransform(scrollY, [800, 2200], ["120%", "0%"]);
+  const page3Y = useTransform(scrollY, [1000, 2200], ["120%", "0%"]);
   const page4Y = useTransform(scrollY, [2200, 3000], ["120%", "0%"]);
-  const page5Y = useTransform(scrollY, [3000, 3400], ["120%", "0%"]);
+  const page5Y = useTransform(scrollY, [3000, 4100], ["120%", "0%"]);
 
   return (
     <div className="relative h-[600vh]">
